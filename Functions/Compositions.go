@@ -88,4 +88,4 @@ func (Contractor) Unfaster(p NailPuller, nailSupply *int, b *Board) {
 	}
 }
 
-//Listing 8
+//
