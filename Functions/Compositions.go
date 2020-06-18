@@ -88,4 +88,31 @@ func (Contractor) Unfaster(p NailPuller, nailSupply *int, b *Board) {
 	}
 }
 
-//
+//ProcessBoards works against boards
+func (c Contractor) ProcessBoards(dp NailDrivePuller, nailSupply *int, board []Board) {
+	for i := range boards {
+		b := &boards[i]
+		fmt.Println("Contractor: examining board #%d: +v\n", i+1, b)
+
+		switch {
+		case b.NailsDriven < b.NailsNeeded:
+			c.Fasten(dp, nailSupply, b)
+
+		case b.NailsDriven > b.NailsNeeded:
+			c.Unfasten(dp, nailSupply, b)
+		}
+	}
+}
+
+//Exact behavior required from NailDrivePuller
+func (c Contractor) ProcessBoards(dp NailDrivePuller, nailSupply *int, boards []Board) {
+	switch {
+	case b.NailsDriven < b.NailsNeeded:
+		c.Fasten(dp, nailSupply, b)
+
+	case b.NailsDriven > b.NailsNeeded:
+		c.Unfasten(dp, nailSupply, b)
+	}
+}
+
+//Listing 11
