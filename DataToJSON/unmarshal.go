@@ -5,6 +5,10 @@ import (
 	"fmt"
 )
 
+//if you need a data structure in Go for a JSON object, go tho
+//https://mholt.github.io/json-to-go/
+//enter your JSON and it gives you an appropriate Go data structure
+
 type People struct {
 	Fname string `json:Fname`
 	Lname string `json:Lname`
