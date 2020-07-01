@@ -17,7 +17,7 @@ type People struct {
 
 func main() {
 	s := `[{"Fname":"ABC","Lname":"PQR","Age":27},{"Fname":"XYZ","Lname":"PQR","Age":22}]`
-	bs := []byte(s) //byte string
+	bs := []byte(s) //byte slice
 	fmt.Printf("%T\n", s)
 	fmt.Printf("%T\n", bs)
 
