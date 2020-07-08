@@ -40,3 +40,24 @@ func func2() {
 	}
 
 }
+
+/*
+A type may have a method set associated with it.
+Method set of an interface type is its interface.
+The method set of any other type T consists of all the methods
+declared with the receiver type T.
+
+In a nustshell,
+METHOD SETS determine WHAT METHODS attach to a TYPE.
+
+Receivers		|       Values
+---------------------------------
+(t T)			|	T and *T
+(t *T)			|	*T
+
+
+IMPORTANT :-
+The method set of a type determines the interfaces that the type
+implements and the methods that can be called using a receiver of
+that type
+*/
