@@ -15,7 +15,7 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(gs)
 
-	var mu sync.Mutex
+	var mu sync.Mutex //using a mutex to prevent race condition
 
 	for i := 0; i < gs; i++ {
 		go func() {
