@@ -19,7 +19,7 @@ func main() {
 		go func() {
 			v := counter
 			//time.Sleep(time.Second * 2)
-			runtime.Gosched()
+			//runtime.Gosched()
 			v++
 			counter = v
 			wg.Done()
