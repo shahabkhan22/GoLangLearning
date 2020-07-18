@@ -23,19 +23,19 @@ func main() {
 
 	num := 3
 
-	fmt.Println("Inside Main - sending number to square")
+	fmt.Println("[Inside Main] - sending number to square")
 	squareChannel <- num
-	fmt.Println("Inside Main - Resuming Main")
+	fmt.Println("[Inside Main] - Resuming Main")
 
-	fmt.Println("Inside Main - sending number to cube")
+	fmt.Println("[Inside Main] - sending number to cube")
 	cubeChannel <- num
-	fmt.Println("Inside Main - Resuming Main")
+	fmt.Println("[Inside Main] - Resuming Main")
 
-	fmt.Println("Inside Main - Reading from Channels")
+	fmt.Println("[Inside Main] - Reading from Channels")
 
 	squareval, cubeval := <-squareChannel, <-cubeChannel
 	sum := squareval + cubeval
 
-	fmt.Println("Inside Main - Sum of Square and CUbe of ", num, ": ", sum)
+	fmt.Println("[Inside Main] - Sum of Square and CUbe of ", num, ": ", sum)
 
 }
